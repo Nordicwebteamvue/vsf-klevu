@@ -84,13 +84,14 @@ import VueOfflineMixin from 'vue-offline/mixin'
 import CategoryPanel from 'theme/components/core/blocks/Category/CategoryPanel'
 import { minLength } from 'vuelidate/lib/validators'
 import { disableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock'
+import { KlevuSearch } from 'src/modules/klevu/components/KlevuSearch'
 
 export default {
   components: {
     ProductTile,
     CategoryPanel
   },
-  mixins: [SearchPanel, VueOfflineMixin],
+  mixins: [KlevuSearch, VueOfflineMixin],
   validations: {
     search: {
       minLength: minLength(3)

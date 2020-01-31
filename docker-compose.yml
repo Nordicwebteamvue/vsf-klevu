@@ -14,4 +14,4 @@ services:
       - './.docker/frontend/config.json:/var/www/config/local.json'
       - './.docker/frontend/theme:/var/www/src/themes/default'
       - './.docker/frontend/modules.ts:/var/www/src/modules/client.ts'
-      - './:/var/www/src/modules/klevu'
+      - './packages/klevu:/var/www/src/modules/klevu'

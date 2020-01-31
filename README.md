@@ -22,22 +22,22 @@ Config example:
 }
 ```
 
-Add the following to `vue-storefront/src/modules/index.ts`
+Add the following to `vue-storefront/src/modules/client.ts`
 
 ```
 ...
-import { Storyblok } from './vsf-storyblok-module';
+import { Klevu } from './klevu'
 
 export const registerModules: VueStorefrontModule[] = [
   ...
-  Storyblok
+  Klevu
 ]
 ```
 
 And in `theme/components/core/blocks/SearchPanel/SearchPanel.vue`:
 
 ```
-import {KlevuSearch} from 'src/modules/klevu/components/KlevuSearch'
+import { KlevuSearch } from 'src/modules/klevu/components/KlevuSearch'
 [...]
 mixins: [KlevuSearch, VueOfflineMixin],
 ```

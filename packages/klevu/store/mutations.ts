@@ -18,7 +18,7 @@ export const mutations: MutationTree<KlevuState> = {
           sku,
           url_path: product.url.split('/').reverse()[0],
           name: product.name,
-          priceInclTax: product.startPrice,
+          price_incl_tax: product.startPrice,
           price: product.startPrice,
           final_price: product.startPrice,
           image: product.imageUrl.split(/klevu_images\/\d+X\d+/)[1],

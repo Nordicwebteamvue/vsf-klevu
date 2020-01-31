@@ -1,27 +1,16 @@
 {
-  "klarna": {
-    "shipping_attributes": {
-      "weight": "weight",
-      "width": "width",
-      "height": "height",
-      "length": "length"
-    },
-    "endpoint": "http://api:8080/api/ext/payment-klarna-bridge/create-or-update-order?cartId={{cartId}}",
-    "confirmation": "http://api:8080/api/ext/payment-klarna-bridge/order-id?sid={{sid}}",
-    "validate_order": "http://api:8080/api/ext/payment-klarna-bridge/validate-kco-callback?cartId={{cartId}}",
-    "showShippingOptions": true,
-    "options": {
-      "additional_checkboxes": [
-        {
-          "id": "newsletter_opt_in",
-          "text": "Subscribe to our newsletter",
-          "checked": false,
-          "required": false
-        }
-      ]
+  "klevu": {
+    "cloudSearchHostURL": "eucs13.ksearchnet.com",
+    "ticket": "klevu-15613847743046871",
+    "sv": "1.2.5",
+    "storeViews": {
+      "se": {
+        "ticket": "klevu-15613847743046871",
+        "cloudSearchHostURL": "eucs13.ksearchnet.com"
+      }
     }
   },
   "api": {
-    "url": "http://api:8080"
+    "url": "https://demo.vuestorefront.io/"
   }
 }

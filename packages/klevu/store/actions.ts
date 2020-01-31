@@ -1,31 +1,25 @@
 import { KlevuState, KlevuSettings } from '../types/State'
-import { ActionTree, ActionContext, Store } from 'vuex'
+import { ActionTree } from 'vuex'
 import fetch from 'isomorphic-fetch'
 import config from 'config'
 import qs from 'qs'
 import RootState from '@vue-storefront/core/types/RootState'
-import { currentStoreView } from '@vue-storefront/core/lib/multistore'
-
-const {sv} = config.klevu
 
 export const actions: ActionTree<KlevuState, RootState> = {
   async setSettings ({ commit, state }, settings: Partial<KlevuSettings>) {
     commit('settings', settings)
   },
-  async search ({ commit, state }, string: String) {
+  async search ({ commit, state, getters }, string: String) {
     commit('search', string)
     if (string.length === 0) {
       commit('setLoading', false)
       return
     }
-    const {storeCode} = currentStoreView()
-    const {ticket, cloudSearchHostURL} = storeCode && config.klevu.storeViews[storeCode]
-      ? config.klevu.storeViews[storeCode]
-      : config.klevu
+    const {ticket, cloudSearchHostURL} = getters.options
     const options: any = {
       ...state.settings,
       ticket,
-      sv,
+      sv: config.klevu.sv,
       term: string
     }
     // Filter unused keys
