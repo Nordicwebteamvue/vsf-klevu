@@ -1,0 +1,11 @@
+{
+  "name": "klevu",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/kodbruket/vsf-klevu.git",
+  "author": "Max Malm <max@kodbruket.se>",
+  "license": "MIT",
+  "dependencies": {
+    "qs": "^6.7.0"
+  }
+}
