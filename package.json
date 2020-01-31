@@ -1,0 +1,45 @@
+{
+  "name": "vsf-payment-klarna",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/kodbruket/vsf-payment-klarna.git",
+  "author": [
+    "Robin Nilsson <robin@robins.nu>",
+    "Max Malm <benjick@dumfan.net>"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint packages",
+    "cypress": "cypress open -p 6129",
+    "cypress:ci": "cypress run"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.6",
+    "cypress": "^3.2.0",
+    "elasticdump": "^6.16.2",
+    "eslint": "^4.16.0",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-friendly-formatter": "^4.0.1",
+    "eslint-loader": "^2.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-standard": "^3.1.0",
+    "eslint-plugin-vue": "^5.2.2",
+    "eslint-plugin-vue-storefront": "^0.0.1",
+    "husky": ">=1",
+    "lint-staged": ">=8",
+    "pm2": "^4.2.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  }
+}

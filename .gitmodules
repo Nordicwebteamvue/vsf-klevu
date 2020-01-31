@@ -1,0 +1,6 @@
+[submodule ".docker/vue-storefront-api"]
+	path = .docker/vue-storefront-api
+	url = https://github.com/DivanteLtd/vue-storefront-api.git
+[submodule ".docker/vue-storefront"]
+	path = .docker/vue-storefront
+	url = git@github.com:divanteltd/vue-storefront
